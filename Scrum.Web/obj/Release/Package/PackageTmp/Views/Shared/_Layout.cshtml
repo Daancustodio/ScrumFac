@@ -1,0 +1,112 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="pt-br" charset="ISO-8859-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Scrum</title>
+
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/sb-admin.css" rel="stylesheet" />
+    <link href="~/Content/jquery.datetimepicker.css" rel="stylesheet" />
+    <link href="~/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/Chart.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>    
+    
+</head>
+<body>
+  
+    <div id="wrapper">
+        <div style="height:100%">
+            @* PARTIAL VIEW DO MENULATERAL *@
+            @Html.Partial("~/Views/Shared/_MenuLateral.cshtml")
+        </div>
+        <div class="container" id="page-wrapper">
+            <section class="col-sm-12">
+                <section class="content-wrapper main-content clear-fix">
+                    @RenderBody()                   
+                </section>
+            </section>
+        </div>
+        <hr />      
+        <footer>
+            <div class="content-wrapper container text-center">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - Todos os direitos reservados a ScrumFac - FANAP</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- modal placeholder-->
+    @* DIV DOS MODAIS DE EXCLUSAO *@
+    <div id='myModal' class='modal fade in'>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div id='myModalContent'></div>
+            </div>
+        </div>
+    </div>
+    
+
+    @*<script src="~/Scripts/sb-admin.js"></script>*@
+    <script src="~/Scripts/jquery.metisMenu.js"></script>
+    <script src="~/Scripts/jquery.datetimepicker.js"></script>
+    <script src="~/Scripts/methods_pt.js"></script>
+
+    <script>
+      
+        $('.data').datetimepicker({
+            lang: 'pt-BR',
+            timepicker: false,
+            format: 'd/m/Y'
+        });
+        $('.time').datetimepicker({
+            datepicker: false,
+            format: 'H:i'
+        });
+
+        //Exibe modal delete
+        $(function () {
+            $.ajaxSetup({ cache: false });
+            $("a[data-modal]").on("click", function (e) {
+                $('#myModalContent').load(this.href, function () {
+                    $('#myModal').modal({
+                        keyboard: true
+                    }, 'show');
+
+                    bindForm(this);
+                });
+                return false;
+            });
+        });
+
+        function bindForm(dialog) {
+            $('form', dialog).submit(function () {
+                $('#progress').show('hide');
+                $.ajax({
+                    url: this.action,
+                    type: this.method,
+                    data: $(this).serialize(),
+                    success: function (result) {
+                        if (result.success) {
+                            $('#myModal').modal('hide');
+                            $('#progress').hide();
+                            location.reload();
+                        } else {
+                            $('#progress').modal('hide');
+                            $('#myModalContent').html(result);
+                            bindForm();
+                        }
+                    }
+                });
+                return false;
+            });
+        }
+    </script>
+   
+</body>
+</html>

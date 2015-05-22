@@ -1,0 +1,78 @@
+﻿@{
+    Scrum.Web.Models.ScrumWebContext context = new Scrum.Web.Models.ScrumWebContext();
+    ViewBag.Title = "Release Burndown - ScrumFac";
+}
+<h1 class="text-center">Release BurnDown</h1>
+<hr />
+<p class="col-lg-4" id="pIdProjeto">@Html.DropDownList("idProjeto", "-- Selecione Projeto --")</p>
+<input type="submit" value="Gerar Release" class="btn btn-primary" id="btnGerarRelease" />
+<hr />
+<div style="width: 75%">
+    <canvas id="canvas" height="450" width="800"></canvas>
+</div>
+@{
+    //Realizar pesquisa SQL para o grafico
+    var titulo = from tit in context.Sprint select tit.titulo;
+}
+<script>
+    $("select").addClass("form-control");
+    $('#btnGerarRelease').click(function () {
+
+        var randomScalingFactor = function () { return Math.round(Math.random() * 100) };
+        var sprint = ["sprint 1", "sprint 2", "sprint 3", "sprint 4", "sprint 5"];
+        var valor = [150, 100, 243, 215, 504];
+        var barChartData = {
+            labels: sprint,
+            datasets: [{
+            //    fillColor: "rgba(220,220,220,0.5)",
+            //    strokeColor: "rgba(220,220,220,0.8)",
+            //    highlightFill: "rgba(220,220,220,0.75)",
+            //    highlightStroke: "rgba(220,220,220,1)",
+            //    data: valor
+            //}
+            //, {
+                fillColor: "rgba(151,187,205,0.5)",
+                strokeColor: "rgba(151,187,205,0.8)",
+                highlightFill: "rgba(151,187,205,0.75)",
+                highlightStroke: "rgba(151,187,205,1)",
+                data: valor
+            }
+
+        ]}
+
+        var ctx = document.getElementById("canvas").getContext("2d");
+        window.myBar = new Chart(ctx).Bar(barChartData, {
+            responsive: true
+        });
+
+        //var randomScalingFactor = function () { return Math.round(Math.random() * 100) };
+
+        //var barChartData = {
+        //    labels: ["January", "February", "March", "April", "May", "June", "July"],
+        //    datasets: [
+        //        {
+        //            fillColor: "rgba(220,220,220,0.5)",
+        //            strokeColor: "rgba(220,220,220,0.8)",
+        //            highlightFill: "rgba(220,220,220,0.75)",
+        //            highlightStroke: "rgba(220,220,220,1)",
+        //            data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+        //        },
+        //        {
+        //            fillColor: "rgba(151,187,205,0.5)",
+        //            strokeColor: "rgba(151,187,205,0.8)",
+        //            highlightFill: "rgba(151,187,205,0.75)",
+        //            highlightStroke: "rgba(151,187,205,1)",
+        //            data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+        //        }
+        //    ]
+
+        //}
+
+        //var ctx = document.getElementById("canvas").getContext("2d");
+        //window.myBar = new Chart(ctx).Bar(barChartData, {
+        //    responsive: true
+        //});
+    });
+
+
+</script>

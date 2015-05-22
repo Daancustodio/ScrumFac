@@ -1,0 +1,114 @@
+﻿@model Scrum.Dominio.Models.Tarefa
+
+@{
+    ViewBag.Title = "Detalhes tarefa - Scrum";
+}
+
+<h2 class="text-center">Detalhes tarefa: @Model.titulo</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.horasEstimativa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.horasEstimativa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.horasEfetiva)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.horasEfetiva)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.dataInicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataInicio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.dataConclusao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataConclusao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.obs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.obs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status.status)
+        </dd>
+
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataCriacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataCriacao)
+        </dd>
+
+        <dt>
+           História
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estoria.titulo)
+        </dd>
+
+        <dt>
+           Tipo de tarefa
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipotarefa.titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.membrotime.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.membrotime.nome)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id }, new { @class="btn btn-default"})
+    @Html.ActionLink("Voltar a lista", "Index", null, new { @class = "btn btn-default"})
+</p>

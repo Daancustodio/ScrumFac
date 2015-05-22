@@ -1,0 +1,42 @@
+﻿@model Scrum.Dominio.Models.TipoTarefa
+
+@{
+    ViewBag.Title = "Detalhes tipo tarefa - Scrum";
+}
+
+<h2>Detalhes tipo tarefa: @Model.titulo</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataCriacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataCriacao)
+        </dd>       
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id }, new { @class = "btn btn-default", @title = "Editar tipo tarefa."}) 
+    @Html.ActionLink("Voltar a lista", "Index", null, new { @class = "btn btn-default", @title = "Voltar a lista de tipo de tarefas."})
+</p>

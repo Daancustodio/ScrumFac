@@ -1,0 +1,56 @@
+﻿<nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+       
+    </div>
+    @Html.ActionLink(" ", "Exit", "Login", null, new { @class = "btn btn-danger glyphicon glyphicon-off", @style = "float: right;  margin-top:0.25%; margin-right:0.50%; font-size:x-large;", @title = "Sair do sistema." })
+
+</nav>
+
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav" id="side-menu">
+            <li>
+                @Html.ActionLink("Início", "Index", "Home")
+            </li>
+            <li>@Html.ActionLink("Membro do time", "Index", "MembroTime")</li>
+            <li>@Html.ActionLink("História", "Index", "estoria")</li>
+            <li>@Html.ActionLink("Papel", "Index", "Papel")</li>
+            <li>@Html.ActionLink("Projeto", "Index", "Projeto")</li>
+            <li>@Html.ActionLink("Sprint", "Index", "Sprint")</li>
+            <li>@Html.ActionLink("Tarefa", "Index", "Tarefa")</li>
+            <li>@Html.ActionLink("Time", "Index", "Time")</li>
+            <li>@Html.ActionLink("Tipo de tarefa", "Index", "TipoTarefa")</li>
+            <li id="burdDown">
+                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Relátorios<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>@Html.ActionLink("Sprint BurnDown", "Index", "BurnDown")</li>
+                    <li>@Html.ActionLink("Release BurnDown", "ReleaseBurnDown", "BurnDown")</li>
+                </ul>
+            </li>
+        </ul>
+        <!-- /#side-menu -->
+    </div>
+</nav><!-- /.sidebar-collapse -->
+
+<script type="text/javascript">
+    $(function () {
+        $('#side-menu').metisMenu();        
+    });
+    $(function () {
+        $(window).bind("load resize", function () {
+            console.log($(this).width())
+            if ($(this).width() < 768) {
+                $('div.sidebar-collapse').addClass('collapse')
+            } else {
+                $('div.sidebar-collapse').removeClass('collapse')
+            }
+        })
+    });
+
+</script>

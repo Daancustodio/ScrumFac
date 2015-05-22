@@ -1,0 +1,53 @@
+﻿@model Scrum.Dominio.Models.MembroTime
+
+@{
+    ViewBag.Title = "Detalhes do membro do time - Scrum";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalhes do membro: @Model.nome</h2>
+
+<div>
+    <h4>MembroTime</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.papel.titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.papel.titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.time.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.time.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataCriacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataCriacao)
+        </dd>
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id }, new { @class = "btn btn-default"})
+    @Html.ActionLink("Voltar a lista", "Index", null, new { @class = "btn btn-default"})
+</p>

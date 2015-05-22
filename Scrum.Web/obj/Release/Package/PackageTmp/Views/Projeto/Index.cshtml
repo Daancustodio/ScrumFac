@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Scrum.Dominio.Models.Projeto>
+
+@{
+    ViewBag.Title = "Lista de projetos - Scrum";
+}
+
+<h2 class="text-center">Lista de projetos</h2>
+
+<p>
+    @Html.ActionLink("Novo", "Create", null, new { @class = "btn btn-default" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.titulo)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.descricao)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.dataCriacao)
+        </th>
+        <th>Opções</th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.titulo)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.descricao) 
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.dataCriacao)
+            </td>
+            <td>
+                @Html.ActionLink(" ", "Edit", new { id = item.id }, new { @class = "btn btn-default glyphicon glyphicon-pencil", @title = "Editar projeto." })
+                @Html.ActionLink(" ", "Details", new { id = item.id }, new { @class = "btn btn-primary glyphicon glyphicon-list-alt", @title = "Visualizar detalhes do projeto." })
+                @Html.Raw("<a data-modal='' href='/projeto/Delete/" + item.id + "' id='" + item.id + "' title='Delete'> <span class='btn btn-danger glyphicon glyphicon-trash'> </span> </a>")
+               
+            </td>
+        </tr>
+}
+
+</table>

@@ -1,0 +1,76 @@
+﻿@model Scrum.Dominio.Models.Usuario
+@{
+    ViewBag.Title = "Cadastro - Scrum";
+    Layout = "~/Views/Shared/_Login.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal panel panel-default col-sm-7 col-md-5 col-md-offset-4">
+        <div class="panel-heading text-center"> <strong>Cadastro ScrumFac</strong></div>
+        <div class="panel-body">
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-sm-10 col-md-10">
+                    @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.senha, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-sm-10 col-md-10">
+                    @Html.EditorFor(model => model.senha, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.senha, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.confirmaSenha, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-sm-10 col-md-10">
+                    @Html.EditorFor(model => model.confirmaSenha, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.confirmaSenha, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.nome, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-sm-10 col-md-10">
+                    @Html.EditorFor(model => model.nome, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.nome, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            @*<div class="form-group">
+                    @Html.LabelFor(model => model.foto, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-sm-10 col-md-10">
+                        @Html.EditorFor(model => model.foto, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.foto, "", new { @class = "text-danger" })
+                    </div>
+                </div>*@
+            @*<div class="form-group">
+                <div class="col-sm-12 col-md-12">
+                    <input type="file" class="btn btn-warning" id="FotoUpload" />
+                </div>
+                </div>*@
+            <div class="form-group text-center">
+                <div class="col-md-10 col-sm-10">
+                    <input type="submit" value="Cadastrar" class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer text-right">
+            @Html.ActionLink("Voltar", "Login", "Autenticacao")
+        </div>
+
+    </div>
+}
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/methods_pt.js"></script>

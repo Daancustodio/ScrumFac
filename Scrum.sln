@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scrum.Dominio", "Scrum.Dominio\Scrum.Dominio.csproj", "{AF6D972F-3DE8-44A2-811D-490F259BEFD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scrum.Web", "Scrum.Web\Scrum.Web.csproj", "{FE8C9D89-C1C7-4551-925C-53B128AE455D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scrum.Web.Tests", "Scrum.Web.Tests\Scrum.Web.Tests.csproj", "{D298388C-D168-4CC3-86A4-38381F442374}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF6D972F-3DE8-44A2-811D-490F259BEFD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF6D972F-3DE8-44A2-811D-490F259BEFD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF6D972F-3DE8-44A2-811D-490F259BEFD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF6D972F-3DE8-44A2-811D-490F259BEFD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE8C9D89-C1C7-4551-925C-53B128AE455D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE8C9D89-C1C7-4551-925C-53B128AE455D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE8C9D89-C1C7-4551-925C-53B128AE455D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE8C9D89-C1C7-4551-925C-53B128AE455D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D298388C-D168-4CC3-86A4-38381F442374}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D298388C-D168-4CC3-86A4-38381F442374}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D298388C-D168-4CC3-86A4-38381F442374}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D298388C-D168-4CC3-86A4-38381F442374}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
