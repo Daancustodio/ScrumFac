@@ -86,6 +86,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\BurnDownSprint.cs" />
     <Compile Include="Models\Estoria.cs" />
     <Compile Include="Models\MembroTime.cs" />
     <Compile Include="Models\Papel.cs" />

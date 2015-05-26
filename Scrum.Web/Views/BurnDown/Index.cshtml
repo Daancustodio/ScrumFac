@@ -29,34 +29,15 @@
         $('#pIdProjeto').addClass('hide');
         var idProjeto = document.getElementById('idProjeto').value;
 
-       // $.getJSON("/BurnDown/GetSprintProjeto/", { idProjeto: idProjeto }, function (data) { alert(data.titulo); });
-
         $.ajax({
             url: "/BurnDown/GetSprintProjeto/",
             type: 'GET',
             dataType: 'json',
-            data: { idProjeto: idProjeto },
-            //beforeSend: function () {
-            //    var loading = "<span><em>Excluindo</em>&nbsp;<i class='glyphicon glyphicon-refresh icon-refresh-animate'></i></span>";
-            //    $('#deleteModal .modal-header h4').after(loading);
-            //},
-            success: function (data) {
-                alert(data.titulo);
-            },
-            complete: function (data) {
-                alert(data.titulo);
-            }
+            data: { idProjeto: idProjeto }           
         });
-
-
-
         
         $('#pIdSprint').removeClass('hide');
     });
-
-
-        //DROPDOWNLIST DE SPRINT SO VAI APARECER SE O RESULTADO FOR DIFERENTE DE 0 OU NULL
-
 
 
     $('#btnGerarBurnDown').click(function () {
@@ -65,57 +46,52 @@
         
         $('#pIdSprint').addClass('hide');
         $('#pIdProjeto').removeClass('hide');
+        var id = $('#idSprint').val();
 
+        $.ajax({
+            url: "/BurnDown/BuscarSprintId/",
+            type: 'GET',
+            dataType: 'json',
+            data: { idSprint: id },            
+            success: function (data) {             
+                createBurnDown(data);
+            }            
+        });
 
-        var randomScalingFactor = function () { return Math.round(Math.random() * 100) };
-        var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho"];
-        var dt1 = [100, 90, 95, 95, 67, 52, 34];
-        var dt2 = [100, 100, 80, 72, 50, 20, 0];
+    });
+
+    function createBurnDown(burnDownSprint) {
         var lineChartData = {
-            labels: meses,
+            labels: burnDownSprint.Legenda,
             datasets: [
-				{
-				    label: "primeira",
-				    fillColor: "rgba(220,220,220,0.2)",
-				    strokeColor: "rgba(220,220,220,1)",
-				    pointColor: "rgba(220,220,220,1)",
-				    pointStrokeColor: "#fff",
-				    pointHighlightFill: "#fff",
-				    pointHighlightStroke: "rgba(220,220,220,1)",
-				    data: dt1
-				},
-				{
-				    label: "segunda",
-				    fillColor: "rgba(151,187,205,0.2)",
-				    strokeColor: "rgba(151,187,205,1)",
-				    pointColor: "rgba(151,187,205,1)",
-				    pointStrokeColor: "#fff",
-				    pointHighlightFill: "#fff",
-				    pointHighlightStroke: "rgba(151,187,205,1)",
-				    data: dt2
-				},
                 {
-                    label: "Ideal",
+                    label: "Desempenho",
+                    fillColor: "rgba(151,187,205,0.2)",
+                    strokeColor: "rgba(151,187,205,1)",
+                    pointColor: "rgba(151,187,205,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: burnDownSprint.Desempenho
+                },
+                {
+                    label: "Meta Ideal",
                     fillColor: "rgba(151,187,205,0.2)",
                     strokeColor: "rgba(255, 0, 0, 1)",
                     pointColor: "rgba(255, 0, 0, 1)",
                     pointStrokeColor: "#fff",
                     pointHighlightFill: "#fff",
                     pointHighlightStroke: "rgba(255, 0, 0, 1)",
-                    data: [100, 84, 68, 51, 34, 17, 0]
+                    data: burnDownSprint.Meta
 
                 }
             ]
 
         };
 
-
         var ctx = document.getElementById("canvas").getContext("2d");
         window.myLine = new Chart(ctx).Line(lineChartData, {
             responsive: true
         });
-
-
-    });
-
+    }
 </script>
