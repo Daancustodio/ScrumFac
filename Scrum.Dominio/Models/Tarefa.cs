@@ -17,8 +17,8 @@ namespace Scrum.Dominio.Models
         [Display(Name = "Descrição")]
         [Required(ErrorMessage = "Informe a descrição.")]
         public string descricao { get; set; }
-        [Display(Name = "Estimativa")]
-        [Required(ErrorMessage = "Informe a estimativa.")]
+        [Display(Name = "Estimativa")]        
+        [Required(ErrorMessage = "Informe a estimativa.")]        
         public TimeSpan horasEstimativa { get; set; }
         [Display(Name = "Efetiva")]
         public TimeSpan? horasEfetiva { get; set; }
