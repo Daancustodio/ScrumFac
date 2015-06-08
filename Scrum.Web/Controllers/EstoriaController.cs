@@ -9,11 +9,13 @@ using System.Web;
 using System.Web.Mvc;
 using Scrum.Dominio.Models;
 using Scrum.Web.Models;
+using System.Globalization;
 
 namespace Scrum.Web.Controllers
 {
     public class EstoriaController : Controller
     {
+        
         private ScrumWebContext db = new ScrumWebContext();
 
         // GET: Estoria
@@ -49,7 +51,7 @@ namespace Scrum.Web.Controllers
         // POST: Estoria/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "id,titulo,descricao,pontosEstimados,dataInicio,dataConclusao,dataCriacao,dataExclusao,foiExcluido,idSprint,idStatus")] Estoria estoria)
+        public async Task<ActionResult> Create(Estoria estoria)
         {
             estoria.dataCriacao = DateTime.Now;
             if (ModelState.IsValid)
@@ -84,7 +86,7 @@ namespace Scrum.Web.Controllers
         // POST: Estoria/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "id,titulo,descricao,pontosEstimados,dataInicio,dataConclusao,dataCriacao,dataExclusao,foiExcluido,idSprint,idStatus")] Estoria estoria)
+        public async Task<ActionResult> Edit(Estoria estoria)
         {
             if (ModelState.IsValid)
             {

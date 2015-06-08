@@ -16,7 +16,12 @@
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/Chart.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>    
-    
+    <style type="text/css">
+        textarea {
+            min-width: 100%;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
   
@@ -41,7 +46,7 @@
             </div>
         </footer>
     </div>
-    <!-- modal placeholder-->
+    
     @* DIV DOS MODAIS DE EXCLUSAO *@
     <div id='myModal' class='modal fade in'>
         <div class="modal-dialog">
@@ -50,15 +55,14 @@
             </div>
         </div>
     </div>
-    
-
-    @*<script src="~/Scripts/sb-admin.js"></script>*@
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/methods_pt.js"></script>
     <script src="~/Scripts/jquery.metisMenu.js"></script>
     <script src="~/Scripts/jquery.datetimepicker.js"></script>
-    <script src="~/Scripts/methods_pt.js"></script>
-
+    <script src="~/Scripts/jquery.alphanum.js"></script>
     <script>
-      
+        $('.numerico').numeric();
         $('.data').datetimepicker({
             lang: 'pt-BR',
             timepicker: false,
@@ -106,6 +110,21 @@
                 return false;
             });
         }
+
+        //SCRIPT PARA O MENU
+        $(function () {
+            $('#menu').metisMenu();
+        });
+        $(function () {
+            $(window).bind("load resize", function () {
+                console.log($(this).width())
+                if ($(this).width() < 768) {
+                    $('div.sidebar-collapse').addClass('collapse')
+                } else {
+                    $('div.sidebar-collapse').removeClass('collapse')
+                }
+            })
+        });
     </script>
    
 </body>

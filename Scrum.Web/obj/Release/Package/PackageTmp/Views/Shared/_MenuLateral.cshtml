@@ -6,15 +6,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-       
+
     </div>
-    @Html.ActionLink(" ", "Exit", "Login", null, new { @class = "btn btn-danger glyphicon glyphicon-off", @style = "float: right;  margin-top:0.25%; margin-right:0.50%; font-size:x-large;", @title = "Sair do sistema." })
-
+    @using (@Html.BeginForm("Sair", "Autenticacao"))
+    {
+        <input type="submit" class="btn btn-lg btn-danger glyphicon glyphicon-off pull-right" value="Sair" />
+    }
 </nav>
-
 <nav class="navbar-default navbar-static-side" role="navigation">
     <div class="sidebar-collapse">
-        <ul class="nav" id="side-menu">
+        <ul class="nav" id="menu">
             <li>
                 @Html.ActionLink("Início", "Index", "Home")
             </li>
@@ -37,20 +38,3 @@
         <!-- /#side-menu -->
     </div>
 </nav><!-- /.sidebar-collapse -->
-
-<script type="text/javascript">
-    $(function () {
-        $('#side-menu').metisMenu();        
-    });
-    $(function () {
-        $(window).bind("load resize", function () {
-            console.log($(this).width())
-            if ($(this).width() < 768) {
-                $('div.sidebar-collapse').addClass('collapse')
-            } else {
-                $('div.sidebar-collapse').removeClass('collapse')
-            }
-        })
-    });
-
-</script>

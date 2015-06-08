@@ -49,7 +49,7 @@ namespace Scrum.Web.Controllers
         // POST: MembroTime/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "id,dataCriacao,dataExclusao,foiExcluido,idPapel,idTime,nome")] MembroTime membroTime)
+        public async Task<ActionResult> Create(MembroTime membroTime)
         {
             membroTime.dataCriacao = DateTime.Now;
             if (ModelState.IsValid)
@@ -84,7 +84,7 @@ namespace Scrum.Web.Controllers
         // POST: MembroTime/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "id,dataCriacao,dataExclusao,foiExcluido,idPapel,idTime,nome")] MembroTime membroTime)
+        public async Task<ActionResult> Edit(MembroTime membroTime)
         {
             if (ModelState.IsValid)
             {

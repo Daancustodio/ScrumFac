@@ -7,75 +7,78 @@
 <h2 class="text-center">Lista de tarefa</h2>
 
 <p>
-    @Html.ActionLink("Novo", "Create", null, new { @class = "btn btn-default"})
+    @Html.ActionLink("Novo", "Create", null, new { @class = "btn btn-default" })
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.titulo)
-        </th>        
-        <th>
-            @Html.DisplayNameFor(model => model.horasEstimativa)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.horasEfetiva)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.dataConclusao)
-        </th>         
-        <th>
-            @Html.DisplayNameFor(model => model.dataInicio)
-        </th>        
-        <th>
-            @Html.DisplayNameFor(model => model.idEstoria)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.idTipotarefa)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.idUsuarioPapelTime)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.idStatus)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.titulo)
-        </td>       
-        <td>
-           @Html.DisplayFor(modelItem => item.horasEstimativa)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.horasEfetiva)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.dataConclusao)
-        </td>        
-        <td>
-            @Html.DisplayFor(modelItem => item.dataInicio)
-        </td>       
-        <td>
-            @Html.DisplayFor(modelItem => item.estoria.titulo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.tipotarefa.titulo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.membrotime.nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.status.status)
-        </td>
-        <td>
-            @Html.ActionLink(" ", "Edit", new { id = item.id }, new { @class = "btn btn-default glyphicon glyphicon-pencil", @title = "Editar tarefa." })
-            @Html.ActionLink(" ", "Details", new { id = item.id }, new { @class = "btn btn-primary glyphicon glyphicon-list-alt", @title = "Visualizar detalhes da tarefa." })
-            @Html.Raw("<a data-modal='' href='/Tarefa/Delete/" + item.id + "' id='" + item.id + "' title='Delete'> <span class='btn btn-danger glyphicon glyphicon-trash'> </span> </a>")
-        </td>
-    </tr>
-}
-
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.horasEstimativa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.horasEfetiva)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dataConclusao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dataInicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idEstoria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idTipotarefa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idUsuarioPapelTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idStatus)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.horasEstimativa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.horasEfetiva)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dataConclusao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dataInicio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.estoria.titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tipotarefa.titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.membrotime.nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.status.status)
+                </td>
+                <td>
+                    @Html.ActionLink(" ", "Edit", new { id = item.id }, new { @class = "btn btn-default glyphicon glyphicon-pencil", @title = "Editar tarefa." })
+                    @Html.ActionLink(" ", "Details", new { id = item.id }, new { @class = "btn btn-primary glyphicon glyphicon-list-alt", @title = "Visualizar detalhes da tarefa." })
+                    @Html.Raw("<a data-modal='' href='/Tarefa/Delete/" + item.id + "' id='" + item.id + "' title='Delete'> <span class='btn btn-danger glyphicon glyphicon-trash'> </span> </a>")
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>

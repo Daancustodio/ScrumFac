@@ -16,7 +16,12 @@
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/Chart.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>    
-    
+    <style type="text/css">
+        textarea {
+            min-width: 100%;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
   
@@ -50,13 +55,14 @@
             </div>
         </div>
     </div>
-    
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/methods_pt.js"></script>
     <script src="~/Scripts/jquery.metisMenu.js"></script>
     <script src="~/Scripts/jquery.datetimepicker.js"></script>
-    <script src="~/Scripts/methods_pt.js"></script>
-
+    <script src="~/Scripts/jquery.alphanum.js"></script>
     <script>
-      
+        $('.numerico').numeric();
         $('.data').datetimepicker({
             lang: 'pt-BR',
             timepicker: false,

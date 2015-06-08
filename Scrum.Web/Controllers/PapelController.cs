@@ -50,6 +50,8 @@ namespace Scrum.Web.Controllers
         public async Task<ActionResult> Create(Papel papel)
         {
             papel.dataCriacao = DateTime.Now;
+            //papel.idUsuario = Sessoes.UsuarioLogado.id;
+                
             if (ModelState.IsValid)
             {
                 db.Papel.Add(papel);

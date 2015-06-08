@@ -12,26 +12,27 @@ namespace Scrum.Dominio.Models
         public List<int> Meta { get; private set; }
         public List<int> Desempenho { get; private set; }
         public List<string> Legenda { get; private set; }
+
         public BurnDownSprint(Sprint sprint)
         {
-            this.CriarBurnDown(sprint);            
+            this.CriarBurnDown(sprint);
         }
 
 
         private void CriarBurnDown(Sprint sprint)
         {
-            
+
             var tarefas = new List<Tarefa>();
             sprint.estorias.ToList().ForEach(c =>
             {
                 tarefas.AddRange(c.tarefas);
             });
-            
+
             var concluidas = tarefas
-                .OrderBy(o=>o.dataConclusao)
-                .Where(w=>w.dataConclusao != null)
-                .GroupBy(c=> c.dataConclusao)
-                .Select(c => c.Sum(g => g.horasEstimativa.Hours) )
+                .OrderBy(o => o.dataConclusao)
+                .Where(w => w.dataConclusao != null)
+                .GroupBy(c => c.dataConclusao)
+                .Select(c => c.Sum(g => g.horasEstimativa.Hours))
                 .ToList();
 
             var totalHoras = tarefas.Sum(c => c.horasEstimativa.Hours);
@@ -48,9 +49,9 @@ namespace Scrum.Dominio.Models
             meta.Add(totalHoras);
             for (int i = 1; i < meta.Capacity; i++)
             {
-                var metaDiaria = totalHoras/dias.Value.Days;
+                var metaDiaria = totalHoras / dias.Value.Days;
                 ultimaMeta -= metaDiaria;
-                
+
                 meta.Add(ultimaMeta);
                 var dayOfSprint = sprint.dataInicio.Value.AddDays(i).ToString("dd/MM");
                 daysOfSprint.Add(dayOfSprint);

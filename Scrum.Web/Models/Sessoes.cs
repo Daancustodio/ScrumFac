@@ -11,28 +11,52 @@ namespace Scrum.Web.Models
 {
     public class Sessoes
     {
-        private static HttpSessionState session { get { return HttpContext.Current.Session; } }
-        public static Usuario UsuarioLogado
+        //private static HttpSessionState session { get { return HttpContext.Current.Session; } }
+        
+        //public static Usuario UsuarioLogado
+        //{
+        //    get { return (Usuario)usuarioLogado["UsuarioLogado"]; }
+        //    set { session["UsuarioLogado"] = value; }
+        //}
+        public static void LogarUser(Usuario usuario)
         {
-            get { return (Usuario)session["UsuarioLogado"]; }
-            set { session["UsuarioLogado"] = value; }
+            HttpCookie cookieUser = new HttpCookie("UserCookieAuthentication");
+            cookieUser.Values["IdUsuario"] = usuario.id.ToString();
+            //cookieUser.Expires = DateTime.Now.AddMinutes(20);
+            cookieUser.Expires = DateTime.Now.AddDays(1);
+            HttpContext.Current.Response.Cookies.Add(cookieUser);
+        }
+        public static Usuario UsuarioLogado()
+        {
+            var usuario = HttpContext.Current.Request.Cookies["UserCookieAuthentication"];
+            if (usuario == null)
+            {
+                return null;
+            }
+            else
+            {
+                var iDUsuario = long.Parse(usuario.Values["IDUsuario"]);
+
+                var usuarioRetornado = RecuperaUsuarioPorID(iDUsuario);
+                return usuarioRetornado;
+
+            }
+        }
+        public static Usuario RecuperaUsuarioPorID(long IDUsuario)
+        {
+            try
+            {
+                using (ScrumWebContext db = new ScrumWebContext())
+                {
+                    var usuario = db.Usuario.Where(u => u.id == IDUsuario).SingleOrDefault();
+                    return usuario;
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
-        public static Usuario RegistraCookieAutenticacao(Usuario IDUsuario)
-        {
-            //Criando um objeto cookie
-            HttpCookie UserCookie = new HttpCookie("UserCookieAuthentication");
-
-            //Setando o ID do usuário no cookie
-            //UserCookie.Values["IDUsuario"] = CadeMeuMedico.Repositorios.RepositorioCriptografia.Criptografar(IDUsuario.ToString());
-
-            //Definindo o prazo de vida do cookie
-            UserCookie.Expires = DateTime.Now.AddDays(1);
-
-            //Adicionando o cookie no contexto da aplicação
-            HttpContext.Current.Response.Cookies.Add(UserCookie);
-
-            return IDUsuario;
-        }
     }
 }

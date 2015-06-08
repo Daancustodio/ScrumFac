@@ -15,9 +15,9 @@ namespace Scrum.Web.Controllers
         // GET: Configuracao
         public ActionResult Index()
         {
-            Usuario user = new Usuario();
-            user = Sessoes.UsuarioLogado;
-            //user = db.Usuario.FirstOrDefault(u => u.id ==user.id);
+            //Usuario user = new Usuario();
+            //user = HttpContext.Current.Request.Cookies["UserCookieAuthentication"];
+            ////user = db.Usuario.FirstOrDefault(u => u.id ==user.id);
             return View();
         }
     }

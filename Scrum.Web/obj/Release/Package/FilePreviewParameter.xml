@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="IIS Web Application Name" description="" value="scrumFac" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\projetos\\Faculdade\\Scrum\\Scrum\.Web\\obj\\Release\\Package\\PackageTmp$" />
-    <parameterEntry kind="ProviderPath" scope="setAcl" match="^D:\\projetos\\Faculdade\\Scrum\\Scrum\.Web\\obj\\Release\\Package\\PackageTmp$" />
+  <parameter name="IIS Web Application Name" description="" value="scrumfac" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\faculdade\ projeto\\ScrumFac-master\\Scrum\.Web\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^D:\\faculdade\ projeto\\ScrumFac-master\\Scrum\.Web\\obj\\Release\\Package\\PackageTmp$" />
   </parameter>
-  <parameter name="ScrumWebContext-Web.config Connection String" description="ScrumWebContext Connection String used in web.config by the application to access the database." value="Database=Scrum;Server=localhost;UserId=root;Password=1234" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="D:\\projetos\\Faculdade\\Scrum\\Scrum\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ScrumWebContext']/@connectionString" />
+  <parameter name="ScrumWebContext-Web.config Connection String" description="" value="Database=Scrum;Server=localhost;UserId=root;Password=1234" tags="">
+    <parameterEntry kind="XmlFile" scope="D:\\faculdade\ projeto\\ScrumFac-master\\Scrum\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ScrumWebContext']/@connectionString" />
   </parameter>
 </parameters>

@@ -16,7 +16,7 @@ namespace Scrum.Web.Controllers
     public class ProjetoController : Controller
     {
         private ScrumWebContext db = new ScrumWebContext();
-        Usuario user = Sessoes.UsuarioLogado;
+        Usuario user = Sessoes.UsuarioLogado();
 
         // GET: Projeto
         public async Task<ActionResult> Index()
@@ -51,7 +51,7 @@ namespace Scrum.Web.Controllers
         public async Task<ActionResult> Create(Projeto projeto)
         {
             projeto.dataCriacao = DateTime.Now;
-            projeto.idUsuario = Sessoes.UsuarioLogado.id;
+            projeto.idUsuario = user.id;
 
             if (ModelState.IsValid)
             {

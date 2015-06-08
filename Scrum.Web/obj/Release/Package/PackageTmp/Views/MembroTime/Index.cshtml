@@ -1,53 +1,53 @@
 ﻿@model IEnumerable<Scrum.Dominio.Models.MembroTime>
-
 @{
     ViewBag.Title = "Lista de membros do time cadastrados - Scrum";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <h2 class="text-center" title="Tela de visualização de membros de um time.">Membros cadastrados</h2>
-
 <p>
     @Html.ActionLink(" Adicionar", "Create", null, new { @class = "btn btn-default", @title = "Adicionar membro ao time." })
 </p>
-<table class="table">
-    <tr>
-        <th title="titulo do papel cadastrado.">
-            @Html.DisplayNameFor(model => model.papel.titulo)
-        </th>
-        <th title="Nome do time cadastrado.">
-            @Html.DisplayNameFor(model => model.time.nome)
-        </th>
-        <th title="Data da cadastro do membro ao time.">
-            @Html.DisplayNameFor(model => model.dataCriacao)
-        </th>
-        <th title="Nome do membro do time.">
-            @Html.DisplayNameFor(model => model.nome)
-        </th>
-        <th title="Opções editar, visualizar os detalhes, excluir.">Opções</th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
+<table class="table table-hover">
+    <thead>
         <tr>
-            <td title="titulo do papel cadastrado.">
-                @Html.DisplayFor(modelItem => item.papel.titulo)
-            </td>
-            <td title="Nome do time cadastrado.">
-                @Html.DisplayFor(modelItem => item.time.nome)
-            </td>
-            <td title="Data da cadastro do membro ao time.">
-                @Html.DisplayFor(modelItem => item.dataCriacao)
-            </td>
-            <td title="Nome do membro do time.">
-                @Html.DisplayFor(modelItem => item.nome)
-            </td>
-            <td>
-                @Html.ActionLink(" ", "Edit", new { id = item.id }, new { @class = "btn btn-default glyphicon glyphicon-pencil", @title = "Editar membro do time." })
-                @Html.ActionLink(" ", "Details", new { id = item.id }, new { @class = "btn btn-primary glyphicon glyphicon-list-alt", @title = "Visualizar detalhes do membro do time." })
-                @Html.Raw("<a data-modal='' href='/membrotime/Delete/" + item.id + "' id='" + item.id + "' title='Excluir membro do time.'> <span class='btn btn-danger glyphicon glyphicon-trash'> </span> </a>")
-            </td>
+            <th title="titulo do papel cadastrado.">
+                @Html.DisplayNameFor(model => model.papel.titulo)
+            </th>
+            <th title="Nome do time cadastrado.">
+                @Html.DisplayNameFor(model => model.time.nome)
+            </th>
+            <th title="Data da cadastro do membro ao time.">
+                @Html.DisplayNameFor(model => model.dataCriacao)
+            </th>
+            <th title="Nome do membro do time.">
+                @Html.DisplayNameFor(model => model.nome)
+            </th>
+            <th title="Opções editar, visualizar os detalhes, excluir.">Opções</th>
         </tr>
-    }
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td title="titulo do papel cadastrado.">
+                    @Html.DisplayFor(modelItem => item.papel.titulo)
+                </td>
+                <td title="Nome do time cadastrado.">
+                    @Html.DisplayFor(modelItem => item.time.nome)
+                </td>
+                <td title="Data do cadastro do membro ao time.">
+                    @Html.DisplayFor(modelItem => item.dataCriacao)
+                </td>
+                <td title="Nome do membro do time.">
+                    @Html.DisplayFor(modelItem => item.nome)
+                </td>
+                <td>
+                    @Html.ActionLink(" ", "Edit", new { id = item.id }, new { @class = "btn btn-default glyphicon glyphicon-pencil", @title = "Editar membro do time." })
+                    @Html.ActionLink(" ", "Details", new { id = item.id }, new { @class = "btn btn-primary glyphicon glyphicon-list-alt", @title = "Visualizar detalhes do membro do time." })
+                    @Html.Raw("<a data-modal='' href='/membrotime/Delete/" + item.id + "' id='" + item.id + "' title='Excluir membro do time.'> <span class='btn btn-danger glyphicon glyphicon-trash'> </span> </a>")
+                </td>
+            </tr>
+        }
+    </tbody>
 
 </table>

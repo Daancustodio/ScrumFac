@@ -19,43 +19,34 @@
         <canvas id="canvas" height="450" width="1000"></canvas>
     </div>
 </div>
-
-<script src="~/Scripts/jquery-1.10.2.min.js"></script>
 <script type="text/javascript">
     $("select").addClass("form-control");
     $('#idProjeto').change(function () {
-        //COLOCAR FUNÇAO PARA FILTRAR A SPRINT POR ID DO PROJETO E PREENCHER O DROPDOWN
-        //COM AS SPRINTS DO PROJETO ESCOLHIDO
         $('#pIdProjeto').addClass('hide');
         var idProjeto = document.getElementById('idProjeto').value;
-
         $.ajax({
             url: "/BurnDown/GetSprintProjeto/",
             type: 'GET',
             dataType: 'json',
-            data: { idProjeto: idProjeto }           
+            data: { idProjeto: idProjeto }
         });
-        
+
         $('#pIdSprint').removeClass('hide');
+
     });
 
-
     $('#btnGerarBurnDown').click(function () {
-        //QUANDO O BOTAO GERAR RELATORIO FOR CLICADO GERAR O RELATORIO DA SPRINT E COLOCAR OS
-        //DROPDOWNLIST DEFAULT ATE MESMO OS VALORES
-        
         $('#pIdSprint').addClass('hide');
         $('#pIdProjeto').removeClass('hide');
         var id = $('#idSprint').val();
-
         $.ajax({
             url: "/BurnDown/BuscarSprintId/",
             type: 'GET',
             dataType: 'json',
-            data: { idSprint: id },            
-            success: function (data) {             
+            data: { pidSprint: id },
+            success: function (data) {
                 createBurnDown(data);
-            }            
+            }
         });
 
     });

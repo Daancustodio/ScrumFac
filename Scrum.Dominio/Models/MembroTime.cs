@@ -27,6 +27,7 @@ namespace Scrum.Dominio.Models
         public long idTime { get; set; }
         [Required(ErrorMessage = "Informe o nome do menbro.")]
         [Display(Name = "Nome")]
+        [StringLength(30,MinimumLength=1,ErrorMessage="O nome deve conter no máximo 30 caracteres.")]
         public string nome { get; set; }
         [ForeignKey("idPapel")]
         public virtual Papel papel { get; set; }

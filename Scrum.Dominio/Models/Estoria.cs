@@ -17,6 +17,7 @@ namespace Scrum.Dominio.Models
         public string titulo { get; set; }
         [Display(Name = "Descrição")]
         [Required(ErrorMessage = "O campo descrição é obrigatório.")]
+        [DataType(DataType.MultilineText)]
         public string descricao { get; set; }
         [Display(Name = "Pontos estimados")]
         [DataType(DataType.Text)]

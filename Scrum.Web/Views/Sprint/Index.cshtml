@@ -1,71 +1,70 @@
 ﻿@model IEnumerable<Scrum.Dominio.Models.Sprint>
-
 @{
     ViewBag.Title = "Lista de Sprints - Scrum";
 }
-
 <h2 class="text-center">Sprint Cadastradas</h2>
-
 <p>
     @Html.ActionLink("Nova", "Create", null, new { @class = "btn btn-default" })
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.titulo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.foco)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.dataInicio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.dataConclusao)
-        </th>
-        <th>
-            @*@Html.DisplayNameFor(model => model.status.status)*@
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.dataCriacao)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.projeto.titulo)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
+<table class="table table-hover">
+    <thead>
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.titulo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.foco)%
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.dataInicio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.dataConclusao)
-            </td>
-            <td>
-                @*@Html.DisplayFor(modelItem => item.status.status)*@
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.dataCriacao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.projeto.titulo)
-            </td>
-            <td>
-                @Html.ActionLink(" ", "Edit", new { id = item.id }, new { @class = "btn btn-default glyphicon glyphicon-pencil", @title = "Editar sprint." })
-                @Html.ActionLink(" ", "Details", new { id = item.id }, new { @class = "btn btn-primary glyphicon glyphicon-list-alt", @title = "Visualizar detalhes da sprint." })                           
-                @Html.Raw("<a data-modal='' href='/Sprint/Delete/" + item.id + "' id='" + item.id + "' title='Delete'> <span class='btn btn-danger glyphicon glyphicon-trash'> </span> </a>")
-             
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.foco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dataInicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dataConclusao)
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.status.status)*@
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dataCriacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.projeto.titulo)
+            </th>
+            <th></th>
         </tr>
-    }
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.foco)%
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dataInicio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dataConclusao)
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.status.status)*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dataCriacao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.projeto.titulo)
+                </td>
+                <td>
+                    @Html.ActionLink(" ", "Edit", new { id = item.id }, new { @class = "btn btn-default glyphicon glyphicon-pencil", @title = "Editar sprint." })
+                    @Html.ActionLink(" ", "Details", new { id = item.id }, new { @class = "btn btn-primary glyphicon glyphicon-list-alt", @title = "Visualizar detalhes da sprint." })
+                    @Html.Raw("<a data-modal='' href='/Sprint/Delete/" + item.id + "' id='" + item.id + "' title='Delete'> <span class='btn btn-danger glyphicon glyphicon-trash'> </span> </a>")
 
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>

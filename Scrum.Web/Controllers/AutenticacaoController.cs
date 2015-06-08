@@ -16,13 +16,13 @@ namespace Scrum.Web.Controllers
         // GET: Autenticacao
         public ActionResult Login()
         {
-            return View(new Usuario());
+            //ViewBag.ReturnUrl = returnUrl;
+            return View();
         }
         [HttpPost]
-        public ActionResult Login(Usuario usuario)
+        public ActionResult Login(Usuario usuario, string returnUrl)
         {
             Usuario user = db.Usuario.FirstOrDefault(u => u.email == usuario.email);
-
 
             if (Equals(usuario.email, "") || Equals(usuario.email, null))
             {
@@ -32,23 +32,16 @@ namespace Scrum.Web.Controllers
             {
                 Response.Write("<script>alert('Informe a Senha.');</script>");
             }
-            else if (!Equals(usuario.email, user.email) && !Equals(usuario.senha, user.senha))
-            {
-                Response.Write("<script>alert('Usuario não cadastrado.');</script>");
-            }
-
-            else if (!Equals(usuario.senha, user.senha))
-            {
-                ModelState.AddModelError("", "Senha não confere");
-                Response.Write(@"<script>alert('Senha não confere');</script>");
-            }
             else
             {
-                FormsAuthentication.SetAuthCookie(user.email, false);
-                Sessoes.RegistraCookieAutenticacao(user);
-                Sessoes.UsuarioLogado = user;
-                ViewBag.UsuarioLogado = user.nome;
-                return Redirect("/Home/Index");
+                //if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/") && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
+                //{
+                    FormsAuthentication.SetAuthCookie(user.email, false);
+                    Sessoes.LogarUser(user);
+                    ViewBag.UsuarioLogado = user.nome;
+                    return Redirect("/Home");
+                //}
+                
 
             }
             return View(new Usuario());
@@ -75,10 +68,6 @@ namespace Scrum.Web.Controllers
         [HttpPost]
         public ActionResult Sair()
         {
-            //System.Net.Mime.MediaTypeNames.Application.Contents.Clear();
-            Session.Abandon();
-            HttpContext.Application.Contents.Clear();
-            HttpContext.Session.Clear();
             FormsAuthentication.SignOut();
             return RedirectToAction("Login");
 

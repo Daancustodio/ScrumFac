@@ -26,3 +26,57 @@ D:\projetos\Faculdade\Scrum\Scrum.Dominio\bin\Release\pt-br\System.Web.Mvc.resou
 D:\projetos\Faculdade\Scrum\Scrum.Dominio\obj\Release\Scrum.Dominio.csprojResolveAssemblyReference.cache
 D:\projetos\Faculdade\Scrum\Scrum.Dominio\obj\Release\Scrum.Dominio.dll
 D:\projetos\Faculdade\Scrum\Scrum.Dominio\obj\Release\Scrum.Dominio.pdb
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\Scrum.Dominio.dll.config
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\Scrum.Dominio.dll
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\Scrum.Dominio.pdb
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\EntityFramework.dll
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\MySql.Data.dll
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\MySql.Data.Entity.EF6.dll
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.Helpers.dll
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.Mvc.dll
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.Razor.dll
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.WebPages.dll
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\EntityFramework.xml
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.Helpers.xml
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.Mvc.xml
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.Optimization.xml
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.Razor.xml
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.WebPages.xml
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.WebPages.Deployment.xml
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.WebPages.Razor.xml
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\bin\Release\pt-br\System.Web.Mvc.resources.dll
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\obj\Release\Scrum.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\obj\Release\Scrum.Dominio.dll
+C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Dominio\obj\Release\Scrum.Dominio.pdb
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\Scrum.Dominio.dll.config
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\Scrum.Dominio.dll
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\Scrum.Dominio.pdb
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\EntityFramework.dll
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\EntityFramework.SqlServer.dll
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\Microsoft.Web.Infrastructure.dll
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\MySql.Data.dll
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\MySql.Data.Entity.EF6.dll
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.Helpers.dll
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.Mvc.dll
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.Razor.dll
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.WebPages.Deployment.dll
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.WebPages.dll
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.WebPages.Razor.dll
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\EntityFramework.xml
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\EntityFramework.SqlServer.xml
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.Helpers.xml
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.Mvc.xml
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.Optimization.xml
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.Razor.xml
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.WebPages.xml
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.WebPages.Deployment.xml
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\System.Web.WebPages.Razor.xml
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\pt-br\System.Web.Mvc.resources.dll
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\obj\Release\Scrum.Dominio.csprojResolveAssemblyReference.cache
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\obj\Release\Scrum.Dominio.dll
+D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\obj\Release\Scrum.Dominio.pdb
