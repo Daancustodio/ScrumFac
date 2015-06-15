@@ -13,6 +13,7 @@ using System.Globalization;
 
 namespace Scrum.Web.Controllers
 {
+    [Authorize]
     public class EstoriaController : Controller
     {
         
