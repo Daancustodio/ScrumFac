@@ -12,7 +12,6 @@ using Scrum.Web.Models;
 
 namespace Scrum.Web.Controllers
 {
-    [Authorize]
     public class MembroTimeController : Controller
     {
         private ScrumWebContext db = new ScrumWebContext();

@@ -8,7 +8,6 @@ namespace Scrum.Dominio.Models
 {
     public class BurnDownSprint
     {
-        //public Sprint Sprint { get; set; } 
         public List<int> Meta { get; private set; }
         public List<int> Desempenho { get; private set; }
         public List<string> Legenda { get; private set; }

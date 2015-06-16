@@ -26,7 +26,7 @@ namespace Scrum.Dominio.Models
         [Display(Name = "Início")]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime? dataInicio { get; set; }
-        [Display(Name = "Termino")]
+        [Display(Name = "Término")]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime? dataConclusao { get; set; }
         

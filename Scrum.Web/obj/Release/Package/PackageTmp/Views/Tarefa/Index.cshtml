@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<Scrum.Dominio.Models.Tarefa>
 
 @{
-    ViewBag.Title = "Lista de tarefa - Scrum";
+    ViewBag.Title = "Lista de tarefas - Scrum";
 }
 
-<h2 class="text-center">Lista de tarefa</h2>
+<h2 class="text-center">Lista de tarefas</h2>
 
 <p>
     @Html.ActionLink("Novo", "Create", null, new { @class = "btn btn-default" })
@@ -22,10 +22,10 @@
                 @Html.DisplayNameFor(model => model.horasEfetiva)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.dataConclusao)
+                @Html.DisplayNameFor(model => model.dataInicio)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.dataInicio)
+                @Html.DisplayNameFor(model => model.dataConclusao)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.idEstoria)
@@ -56,10 +56,10 @@
                     @Html.DisplayFor(modelItem => item.horasEfetiva)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.dataConclusao)
+                    @Html.DisplayFor(modelItem => item.dataInicio)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.dataInicio)
+                    @Html.DisplayFor(modelItem => item.dataConclusao)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.estoria.titulo)

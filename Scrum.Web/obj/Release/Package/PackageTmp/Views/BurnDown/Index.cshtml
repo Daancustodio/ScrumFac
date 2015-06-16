@@ -21,6 +21,7 @@
 </div>
 <script type="text/javascript">
     $("select").addClass("form-control");
+
     $('#idProjeto').change(function () {
         $('#pIdProjeto').addClass('hide');
         var idProjeto = document.getElementById('idProjeto').value;
@@ -28,7 +29,10 @@
             url: "/BurnDown/GetSprintProjeto/",
             type: 'GET',
             dataType: 'json',
-            data: { idProjeto: idProjeto }
+            data: { idProjeto: idProjeto },
+            sucess: function (data) {
+
+            }
         });
 
         $('#pIdSprint').removeClass('hide');

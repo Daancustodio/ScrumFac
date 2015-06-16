@@ -23,31 +23,29 @@ namespace Scrum.Web.Controllers
         public ActionResult ReleaseBurnDown(long? id)
         {
             ViewBag.idProjeto = new SelectList(db.Projeto.AsParallel().Where(p => p.foiExcluido.Equals(false)), "id", "titulo");
-            var Busca = db.Estoria.AsParallel().Where(e => e.idSprint == 1);
-            var totalPontos = Busca.AsParallel().Sum(e => e.pontosEstimados);
-            var result = db.Estoria.Where(e => e.idStatus.Equals(3)).Where(e => e.idSprint.Equals(1));
-            //return Json(result, JsonRequestBehavior.AllowGet);
+
             return View();
         }
         public ActionResult BuscarSprintId(long pidSprint)
         {
 
             var sprint = db.Sprint.Find(pidSprint);
-           
+
             var burnDown = new BurnDownSprint(sprint);
 
             return Json(burnDown, JsonRequestBehavior.AllowGet);
         }
+        public ActionResult BuscarSprintProjeto(long pidProjeto)
+        {
+            var projetoSprint = db.Projeto.Join(db.Sprint, p => p.id, s => s.idProjeto, (p, s) => new { p, s }).Where(i => i.p.id.Equals(pidProjeto));
+            var projeto = db.Projeto.Find(pidProjeto);
+            var burnDownRelease = new BurnDownRelease(projeto);
+
+            return Json(burnDownRelease, JsonRequestBehavior.AllowGet);
+        }
         public ActionResult GetSprintProjeto(long idProjeto)
         {
-            var result = string.Empty;
-
-            //var list = new List<Sprint>();
-            //list = from json in db.Sprint where  select json;
-            //string result = JsonConvert.SerializeObject(list, Formatting.Indented);
-
-            //ViewBag.pIdSprint = new SelectList(db.Sprint.Where(s => s.idProjeto.Equals(idProjeto)).ToList(), "id", "titulo");
-            
+            var result = db.Sprint.Where(i => i.idProjeto.Equals(idProjeto)).ToList();
             return Json(result, JsonRequestBehavior.AllowGet);
         }
     }

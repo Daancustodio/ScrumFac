@@ -1,17 +1,17 @@
 ﻿@model IEnumerable<Scrum.Dominio.Models.Estoria>
 @{
-    ViewBag.Title = "Lista de hitórias - Scrum";
+    ViewBag.Title = "Lista de histórias - Scrum";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h2 class="text-center">Lista de histórias</h2>
 <p>
     @Html.ActionLink("Novo", "Create", null, new { @class = "btn btn-default" })
 </p>
-<table class="table table-hover">
+<table class="table table-hover table-condensed">
     <thead>
         <tr>
     <th title="´Título da sprint.">
-        @Html.DisplayNameFor(model => model.sprint.titulo)
+        Sprint
     </th>
     <th title="Status que a sprint esta atualmente.">
         @Html.DisplayNameFor(model => model.status.status)

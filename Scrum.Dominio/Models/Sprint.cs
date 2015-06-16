@@ -14,20 +14,21 @@ namespace Scrum.Dominio.Models
         [Required(ErrorMessage = "Informar o título da sprint.")]
         [Display(Name = "Título")]
         public string titulo { get; set; }
+        [Display(Name = "Descrição")]
         [Required(ErrorMessage = "Informar a descrição da sprint.")]
         public string descricao { get; set; }
         [Required(ErrorMessage = "Informar os dias úteis da sprint.")]
         [Display(Name = "Dias úteis")]
         public int diasUteis { get; set; }
-        [Display(Name = "Dias de cerimonias")]
+        [Display(Name = "Dias de cerimônias")]
         public int? diasCerimonias { get; set; }
         [Required(ErrorMessage = "Informar as horas de trabalho dia da sprint.")]
-        [Display(Name = "Horas de trabalho dia")]
+        [Display(Name = "Horas de trabalho/dia")]
         [DataType(DataType.Time)]
         public TimeSpan horasTrabDia { get; set; }
         [Display(Name = "Foco")]        
         public int foco { get; set; }
-        [Display(Name = "Data ínicio")]
+        [Display(Name = "Data início")]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime? dataInicio { get; set; }
         [Display(Name = "Data conclusão")]

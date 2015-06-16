@@ -26,11 +26,11 @@ namespace Scrum.Web.Controllers
 
             if (Equals(usuario.email, "") || Equals(usuario.email, null))
             {
-                Response.Write("<script>alert('Informe o usuario.');</script>");
+               Response.Write("<script>alert('Informe o usuario.');</script>");
             }
             else if (Equals(usuario.senha, "") || Equals(usuario.senha, null))
             {
-                Response.Write("<script>alert('Informe a Senha.');</script>");
+               Response.Write("<script>alert('Informe a Senha.');</script>");
             }
             else
             {
@@ -41,7 +41,7 @@ namespace Scrum.Web.Controllers
                     ViewBag.UsuarioLogado = user.nome;
                     return Redirect("/Home");
                 //}
-                
+
 
             }
             return View(new Usuario());

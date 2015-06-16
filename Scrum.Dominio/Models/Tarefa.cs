@@ -28,7 +28,7 @@ namespace Scrum.Dominio.Models
         [DataType(DataType.Time)]
         public TimeSpan? horasEfetiva { get; set; }
 
-        [Display(Name = "Termino")]
+        [Display(Name = "Término")]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime? dataConclusao { get; set; }
 
@@ -55,7 +55,7 @@ namespace Scrum.Dominio.Models
         [Display(Name = "Tipo de tarefa")]
         public long idTipotarefa { get; set; }
 
-        [Display(Name = "Usuario")]
+        [Display(Name = "Usuário")]
         public long? idUsuarioPapelTime { get; set; }
 
         [Display(Name = "Status")]

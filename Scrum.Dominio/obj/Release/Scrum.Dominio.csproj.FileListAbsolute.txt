@@ -80,3 +80,30 @@ D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\bin\Release\pt-br\System.Web.
 D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\obj\Release\Scrum.Dominio.csprojResolveAssemblyReference.cache
 D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\obj\Release\Scrum.Dominio.dll
 D:\faculdade projeto\ScrumFac-master\Scrum.Dominio\obj\Release\Scrum.Dominio.pdb
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\Scrum.Dominio.dll.config
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\Scrum.Dominio.dll
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\Scrum.Dominio.pdb
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\EntityFramework.dll
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\MySql.Data.dll
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\MySql.Data.Entity.EF6.dll
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\System.Web.Helpers.dll
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\System.Web.Mvc.dll
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\System.Web.Razor.dll
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\System.Web.WebPages.dll
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\EntityFramework.xml
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\System.Web.Helpers.xml
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\System.Web.Mvc.xml
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\System.Web.Optimization.xml
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\System.Web.Razor.xml
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\System.Web.WebPages.xml
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\System.Web.WebPages.Deployment.xml
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\System.Web.WebPages.Razor.xml
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\bin\Release\pt-br\System.Web.Mvc.resources.dll
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\obj\Release\Scrum.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\obj\Release\Scrum.Dominio.dll
+C:\Users\Mogorva\Music\ScrumFac\Scrum.Dominio\obj\Release\Scrum.Dominio.pdb

@@ -154,6 +154,7 @@
     <Content Include="font-awesome\scss\_spinning.scss" />
     <Content Include="font-awesome\scss\_stacked.scss" />
     <Content Include="font-awesome\scss\_variables.scss" />
+    <None Include="Properties\PublishProfiles\scrumfac %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\scrumFac.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Imagem\scrum-glossary-agile-terms.png" />
