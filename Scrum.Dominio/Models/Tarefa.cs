@@ -72,5 +72,10 @@ namespace Scrum.Dominio.Models
 
         [ForeignKey("idTipotarefa")]
         public virtual TipoTarefa tipotarefa { get; set; }
+
+        public bool FoiConcluida()
+        {
+            return this.dataConclusao != null;
+        }
     }
 }

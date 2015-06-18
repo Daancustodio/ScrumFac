@@ -17,60 +17,22 @@ D:\projetos\Faculdade\Scrum\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.Deploy
 D:\projetos\Faculdade\Scrum\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.csprojResolveAssemblyReference.cache
 D:\projetos\Faculdade\Scrum\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.dll
 D:\projetos\Faculdade\Scrum\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.pdb
-C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Web.Tests\bin\Debug\Scrum.Web.Tests.dll
-C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Web.Tests\bin\Debug\Scrum.Web.Tests.pdb
-C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Web.Tests\bin\Debug\Scrum.Web.dll
-C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Web.Tests\bin\Debug\Scrum.Dominio.dll
-C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Web.Tests\bin\Debug\EntityFramework.dll
-C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Web.Tests\bin\Debug\System.Web.Razor.dll
-C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.Razor.dll
-C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.dll
-C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
-C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Web.Tests\bin\Debug\Scrum.Web.pdb
-C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Web.Tests\bin\Debug\Scrum.Dominio.pdb
-C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Web.Tests\bin\Debug\EntityFramework.xml
-C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Web.Tests\bin\Debug\System.Web.Razor.xml
-C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.Razor.xml
-C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.xml
-C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
-C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.csprojResolveAssemblyReference.cache
-C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.dll
-C:\Users\Mogorva\Downloads\ScrumFac-master\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.pdb
-D:\faculdade projeto\ScrumFac-master\Scrum.Web.Tests\bin\Debug\Scrum.Web.Tests.dll
-D:\faculdade projeto\ScrumFac-master\Scrum.Web.Tests\bin\Debug\Scrum.Web.Tests.pdb
-D:\faculdade projeto\ScrumFac-master\Scrum.Web.Tests\bin\Debug\Scrum.Web.dll
-D:\faculdade projeto\ScrumFac-master\Scrum.Web.Tests\bin\Debug\Scrum.Dominio.dll
-D:\faculdade projeto\ScrumFac-master\Scrum.Web.Tests\bin\Debug\EntityFramework.dll
-D:\faculdade projeto\ScrumFac-master\Scrum.Web.Tests\bin\Debug\System.Web.Razor.dll
-D:\faculdade projeto\ScrumFac-master\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.Razor.dll
-D:\faculdade projeto\ScrumFac-master\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.dll
-D:\faculdade projeto\ScrumFac-master\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
-D:\faculdade projeto\ScrumFac-master\Scrum.Web.Tests\bin\Debug\Scrum.Web.pdb
-D:\faculdade projeto\ScrumFac-master\Scrum.Web.Tests\bin\Debug\Scrum.Dominio.pdb
-D:\faculdade projeto\ScrumFac-master\Scrum.Web.Tests\bin\Debug\EntityFramework.xml
-D:\faculdade projeto\ScrumFac-master\Scrum.Web.Tests\bin\Debug\System.Web.Razor.xml
-D:\faculdade projeto\ScrumFac-master\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.Razor.xml
-D:\faculdade projeto\ScrumFac-master\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.xml
-D:\faculdade projeto\ScrumFac-master\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
-D:\faculdade projeto\ScrumFac-master\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.csprojResolveAssemblyReference.cache
-D:\faculdade projeto\ScrumFac-master\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.dll
-D:\faculdade projeto\ScrumFac-master\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.pdb
-C:\Users\Mogorva\Music\ScrumFac\Scrum.Web.Tests\bin\Debug\Scrum.Web.Tests.dll
-C:\Users\Mogorva\Music\ScrumFac\Scrum.Web.Tests\bin\Debug\Scrum.Web.Tests.pdb
-C:\Users\Mogorva\Music\ScrumFac\Scrum.Web.Tests\bin\Debug\Scrum.Web.dll
-C:\Users\Mogorva\Music\ScrumFac\Scrum.Web.Tests\bin\Debug\Scrum.Dominio.dll
-C:\Users\Mogorva\Music\ScrumFac\Scrum.Web.Tests\bin\Debug\EntityFramework.dll
-C:\Users\Mogorva\Music\ScrumFac\Scrum.Web.Tests\bin\Debug\System.Web.Razor.dll
-C:\Users\Mogorva\Music\ScrumFac\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.Razor.dll
-C:\Users\Mogorva\Music\ScrumFac\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.dll
-C:\Users\Mogorva\Music\ScrumFac\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
-C:\Users\Mogorva\Music\ScrumFac\Scrum.Web.Tests\bin\Debug\Scrum.Web.pdb
-C:\Users\Mogorva\Music\ScrumFac\Scrum.Web.Tests\bin\Debug\Scrum.Dominio.pdb
-C:\Users\Mogorva\Music\ScrumFac\Scrum.Web.Tests\bin\Debug\EntityFramework.xml
-C:\Users\Mogorva\Music\ScrumFac\Scrum.Web.Tests\bin\Debug\System.Web.Razor.xml
-C:\Users\Mogorva\Music\ScrumFac\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.Razor.xml
-C:\Users\Mogorva\Music\ScrumFac\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.xml
-C:\Users\Mogorva\Music\ScrumFac\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
-C:\Users\Mogorva\Music\ScrumFac\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.csprojResolveAssemblyReference.cache
-C:\Users\Mogorva\Music\ScrumFac\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.dll
-C:\Users\Mogorva\Music\ScrumFac\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.pdb
+C:\wamp\www\ScrumFac\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.csprojResolveAssemblyReference.cache
+C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\Scrum.Web.Tests.dll
+C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\Scrum.Web.Tests.pdb
+C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\Scrum.Web.dll
+C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\Scrum.Dominio.dll
+C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\EntityFramework.dll
+C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\System.Web.Razor.dll
+C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.dll
+C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\Scrum.Web.pdb
+C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\Scrum.Dominio.pdb
+C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\EntityFramework.xml
+C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\System.Web.Razor.xml
+C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.xml
+C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\wamp\www\ScrumFac\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.dll
+C:\wamp\www\ScrumFac\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.pdb
