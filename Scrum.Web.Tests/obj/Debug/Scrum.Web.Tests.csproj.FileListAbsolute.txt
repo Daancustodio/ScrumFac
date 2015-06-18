@@ -17,6 +17,7 @@ D:\projetos\Faculdade\Scrum\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.Deploy
 D:\projetos\Faculdade\Scrum\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.csprojResolveAssemblyReference.cache
 D:\projetos\Faculdade\Scrum\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.dll
 D:\projetos\Faculdade\Scrum\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.pdb
+C:\wamp\www\ScrumFac\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.csprojResolveAssemblyReference.cache
 C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\Scrum.Web.Tests.dll
 C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\Scrum.Web.Tests.pdb
 C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\Scrum.Web.dll
@@ -33,6 +34,5 @@ C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\System.Web.Razor.xml
 C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.Razor.xml
 C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.xml
 C:\wamp\www\ScrumFac\Scrum.Web.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
-C:\wamp\www\ScrumFac\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.csprojResolveAssemblyReference.cache
 C:\wamp\www\ScrumFac\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.dll
 C:\wamp\www\ScrumFac\Scrum.Web.Tests\obj\Debug\Scrum.Web.Tests.pdb

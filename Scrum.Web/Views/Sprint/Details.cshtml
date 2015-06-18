@@ -104,12 +104,14 @@
                                                         @tarefa.titulo
                                                     </div>
 
-                                                    <div class="col-xs-1">
-                                                        <i class="glyphicon glyphicon-ok"></i>
-                                                    </div>
-                                                    <div class="media-left col-xs-2">
-                                                        <img class="media-object" src="http://placehold.it/24x24" alt="...">
-                                                    </div>
+                                                    @if (@tarefa.FoiConcluida()) { 
+                                                        <div class="col-xs-1">
+                                                            <i class="glyphicon glyphicon-ok"></i>
+                                                        </div>
+                                                        <div class="media-left col-xs-2">                                                        
+                                                            @tarefa.membrotime.nome
+                                                        </div>
+                                                    }
                                                 </li>
                                             }
                                         </ul>

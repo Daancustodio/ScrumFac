@@ -43,12 +43,10 @@ C:\wamp\www\ScrumFac\Scrum.Dominio\bin\Debug\System.Web.WebPages.Razor.dll
 C:\wamp\www\ScrumFac\Scrum.Dominio\bin\Debug\EntityFramework.xml
 C:\wamp\www\ScrumFac\Scrum.Dominio\bin\Debug\EntityFramework.SqlServer.xml
 C:\wamp\www\ScrumFac\Scrum.Dominio\bin\Debug\System.Web.Helpers.xml
-C:\wamp\www\ScrumFac\Scrum.Dominio\bin\Debug\System.Web.Mvc.xml
 C:\wamp\www\ScrumFac\Scrum.Dominio\bin\Debug\System.Web.Razor.xml
 C:\wamp\www\ScrumFac\Scrum.Dominio\bin\Debug\System.Web.WebPages.xml
 C:\wamp\www\ScrumFac\Scrum.Dominio\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\wamp\www\ScrumFac\Scrum.Dominio\bin\Debug\System.Web.WebPages.Razor.xml
 C:\wamp\www\ScrumFac\Scrum.Dominio\bin\Debug\pt-br\System.Web.Mvc.resources.dll
-C:\wamp\www\ScrumFac\Scrum.Dominio\obj\Debug\Scrum.Dominio.csprojResolveAssemblyReference.cache
 C:\wamp\www\ScrumFac\Scrum.Dominio\obj\Debug\Scrum.Dominio.dll
 C:\wamp\www\ScrumFac\Scrum.Dominio\obj\Debug\Scrum.Dominio.pdb
