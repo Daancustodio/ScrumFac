@@ -27,7 +27,6 @@ D:\projetos\Faculdade\Scrum\Scrum.Web\obj\Debug\Scrum.Web.dll
 D:\projetos\Faculdade\Scrum\Scrum.Web\obj\Debug\Scrum.Web.pdb
 D:\projetos\Faculdade\Scrum\Scrum.Web\bin\Newtonsoft.Json.dll
 D:\projetos\Faculdade\Scrum\Scrum.Web\bin\Newtonsoft.Json.xml
-C:\wamp\www\ScrumFac\Scrum.Web\obj\Debug\Scrum.Web.csprojResolveAssemblyReference.cache
 C:\wamp\www\ScrumFac\Scrum.Web\bin\Scrum.Web.dll.config
 C:\wamp\www\ScrumFac\Scrum.Web\bin\Scrum.Web.dll
 C:\wamp\www\ScrumFac\Scrum.Web\bin\Scrum.Web.pdb
@@ -53,5 +52,6 @@ C:\wamp\www\ScrumFac\Scrum.Web\bin\System.Web.WebPages.xml
 C:\wamp\www\ScrumFac\Scrum.Web\bin\System.Web.WebPages.Deployment.xml
 C:\wamp\www\ScrumFac\Scrum.Web\bin\System.Web.WebPages.Razor.xml
 C:\wamp\www\ScrumFac\Scrum.Web\bin\pt-br\System.Web.Mvc.resources.dll
+C:\wamp\www\ScrumFac\Scrum.Web\obj\Debug\Scrum.Web.csprojResolveAssemblyReference.cache
 C:\wamp\www\ScrumFac\Scrum.Web\obj\Debug\Scrum.Web.dll
 C:\wamp\www\ScrumFac\Scrum.Web\obj\Debug\Scrum.Web.pdb

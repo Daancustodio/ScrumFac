@@ -48,5 +48,65 @@ namespace Scrum.Dominio.Models
         public virtual Projeto projeto { get; set; }
         [ForeignKey("idStatus")]
         public virtual Status status { get; set; }
+
+        public decimal GetHorasConcluidas()
+        {
+            List<Tarefa> tarefas = new List<Tarefa>();
+
+            this.estorias.ToList().ForEach(
+                estoria => estoria.tarefas.ToList().ForEach
+                    (
+                       ta => tarefas.Add(ta)
+                    )
+                );
+
+            return tarefas.Where(c => c.FoiConcluida()).Sum(x => x.horasEstimativa.Hours);
+        }
+
+        public decimal GetHorasRestantes()
+        {
+            List<Tarefa> tarefas = new List<Tarefa>();
+
+            this.estorias.ToList().ForEach(
+                estoria => estoria.tarefas.ToList().ForEach
+                    (
+                       ta => tarefas.Add(ta)
+                    )
+                );
+
+            return tarefas.Sum(x => x.horasEstimativa.Hours) - this.GetHorasConcluidas();
+        }
+
+        public string GetQuantindadeTarefasConcluidas()
+        {
+            List<Tarefa> tarefas = new List<Tarefa>();
+
+            this.estorias.ToList().ForEach(
+                estoria => estoria.tarefas.ToList().ForEach
+                    (
+                       ta => tarefas.Add(ta)
+                    )
+                );
+
+            var concluidas = tarefas.Where(x => x.FoiConcluida()).ToList().Count;
+
+            return string.Concat(concluidas, "/", tarefas.Count);
+
+        }
+
+        public string GetQuantindadeEstoriasConcluidas()
+        {
+            int concluidas = 0;
+
+            foreach (var estoria in estorias)
+            {
+                if (estoria.tarefas.ToList().TrueForAll(x => x.FoiConcluida()))
+                    concluidas++;
+            }            
+
+            return string.Concat(concluidas, "/", estorias.Count);
+
+        }
+
     }
 }

@@ -4,37 +4,139 @@
     ViewBag.Title = "Detalhes projeto - Scrum";
 }
 
-<h2>Detalhes: @Model.titulo</h2>
+@*<h2>Projeto: @Model.titulo @Html.DisplayNameFor(model => model.dataCriacao): @Html.DisplayFor(model => model.dataCriacao) </h2>*@
 
 <div>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.titulo):
-        </dt>
+    <div class="row">
+        <div class="col-xs-12">
 
-        <dd>
-            @Html.DisplayFor(model => model.titulo)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.descricao):
-        </dt>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a class="btn btn-xs col-xs-12" id="getBurnDown" role="button" data-toggle="collapse" href="#ReleaseBurnDown" aria-expanded="false" aria-controls="#ReleaseBurnDown" data-placement="top" title="O gráfico Release BundDown, exibe a porcentagem concluida de cada sprint">
+                        <i class="glyphicon glyphicon-eye-open">
+                            Release BurnDown
+                        </i>
+                    </a>
+                </div>
+                <div class="panel-body collapse" id="ReleaseBurnDown">
+                    <div style="width:100%; height:450px">
+                        <canvas id="rc" style="height:450px; width:auto;"></canvas>
+                    </div>
+                </div>                
+               
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.descricao)
-        </dd>
+            <script>
+                $('#getBurnDown').click(function () {
 
-        <dt>
-            @Html.DisplayNameFor(model => model.dataCriacao):
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.dataCriacao)
-        </dd>
+                    $.ajax({
+                        url: "/BurnDown/ReleaseBurnDown/",
+                        type: 'GET',
+                        dataType: 'json',
+                        data: { id: @Model.id },
+                        success: function (data) {
+                            createRelease(data);
+                        }
+                    });
 
-       
-    </dl>
+                });
+
+
+                function createRelease(burnDownRelease) {
+
+                    var randomScalingFactor = function () { return Math.round(Math.random() * 100) };
+                    var barChartData = {
+                        labels: burnDownRelease.Legenda,
+                        datasets: [{
+                            fillColor: "rgba(151,187,205,0.5)",
+                            strokeColor: "rgba(151,187,205,0.8)",
+                            highlightFill: "rgba(151,187,205,0.75)",
+                            highlightStroke: "rgba(151,187,205,1)",
+                            data: burnDownRelease.Concluido
+                        }
+
+                        ]
+                    }
+
+                    var ctx = document.getElementById("rc").getContext("2d");
+                    window.myBar = new Chart(ctx).Bar(barChartData, {
+                        responsive: true
+                    });
+                }
+            </script>
+        </div>
+
+
+
+        <div class="col-xs-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <i class="fa fa-info fa-fw"></i> @Model.titulo 
+                    <span class="badge" data-toggle="tooltip" data-placement="top" title="Sprints: Concluidas/Total">@Model.GetQuantidadeSprintsConcluidas()</span>
+                </div>
+
+                <div class="panel-body">
+                    
+                    @foreach (var sprint in Model.sprints)
+                    {
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        @sprint.titulo                                         
+                                        <span class="badge" data-toggle="tooltip" data-placement="top" title="Tarefas: Concluidas/Total">@sprint.GetQuantindadeTarefasConcluidas()</span>
+                                       
+                                         <a class="col-xs-2 btn btn-xs" href="../../Sprint/Details/@sprint.id">
+                                            <i class="glyphicon glyphicon-eye-open">
+                                            </i>
+                                        </a>
+
+                                        <a class="col-xs-2 btn btn-xs" href="../../Sprint/Edit/@sprint.id">
+                                            <i class="glyphicon glyphicon-pencil">
+                                            </i>
+                                        </a>
+                                    </div>
+                                    <div class="panel-body">
+                                        <canvas id="@sprint.id"></canvas>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            var data = [
+                                {
+                                    value: @sprint.GetHorasRestantes(),
+                                    color: "#F7464A",
+                                    highlight: "#FF5A5E",
+                                    label: "Horas a fazer"
+                                },
+                                {
+                                    value: @sprint.GetHorasConcluidas(),
+                                    color: "#46BFBD",
+                                    highlight: "#5AD3D1",
+                                    label: "Horas Concluidas"
+                                }];
+
+                            CreatDonutChart(data, @sprint.id);
+
+                            function CreatDonutChart(sprintDonut, contextID) {
+
+                                var ctx = document.getElementById(contextID).getContext("2d");
+                                var myDoughnutChart = new Chart(ctx).Doughnut(data);
+                            }
+                        </script>
+                    }
+                </div>
+                <div class="panel-footer">
+                    @Model.descricao
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <p>
     @Html.ActionLink("Editar", "Edit", new { id = Model.id }, new { @class = "btn btn-default"})

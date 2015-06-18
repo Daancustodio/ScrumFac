@@ -22,12 +22,10 @@ namespace Scrum.Web.Controllers
         }
         public ActionResult ReleaseBurnDown(long? id)
         {
-            ViewBag.idProjeto = new SelectList(db.Projeto.AsParallel().Where(p => p.foiExcluido.Equals(false)), "id", "titulo");
-            var Busca = db.Estoria.AsParallel().Where(e => e.idSprint == 1);
-            var totalPontos = Busca.AsParallel().Sum(e => e.pontosEstimados);
-            var result = db.Estoria.Where(e => e.idStatus.Equals(3)).Where(e => e.idSprint.Equals(1));
-            //return Json(result, JsonRequestBehavior.AllowGet);
-            return View();
+            var projeto = db.Projeto.Find(id);
+            var burnDownRelease = new BurnDownRelease(projeto);
+
+            return Json(burnDownRelease, JsonRequestBehavior.AllowGet);
         }
         public ActionResult BuscarSprintId(long idSprint)
         {
@@ -37,6 +35,16 @@ namespace Scrum.Web.Controllers
             var retorno = Json(burnDown, JsonRequestBehavior.AllowGet);
             return retorno;
         }
+
+        public ActionResult GetDonutSprint(long idSprint)
+        {
+            var sprint = db.Sprint.Find(idSprint);
+
+            var burnDown = new DonutSprint(sprint);
+            var retorno = Json(burnDown, JsonRequestBehavior.AllowGet);
+            return retorno;
+        }
+
         public ActionResult GetSprintProjeto(long idProjeto)
         {
             var result = string.Empty;

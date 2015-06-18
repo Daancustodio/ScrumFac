@@ -1,5 +1,79 @@
-﻿@{
+﻿          
+
+@{
     ViewBag.title = "ScrumFac - FANAP";
 }
 <h1 class="text-center">@ViewBag.reverencia <br />Bem vindo ao ScrumFac</h1>
-<hr />
+
+<div>
+    <hr />
+    <div class="row">
+        
+        <div class="col-xs-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <i class="fa fa-info fa-fw"></i> Projetos 
+                   
+                </div>
+
+                <div class="panel-body">
+                    @{
+                        var db = new Scrum.Web.Models.ScrumWebContext();
+                        var projetos = db.Projeto.ToList().OrderByDescending(x => x.id);
+                    }
+
+                    @foreach (var projeto in projetos)
+                    {
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        @projeto.titulo
+                                        <span class="badge" data-toggle="tooltip" data-placement="top" title="Sprint: Concluidas/Total">@projeto.GetQuantidadeSprintsConcluidas()</span>
+                                        <span class="badge" data-toggle="tooltip" data-placement="top" title="Projeto: Porcentagem Concluida">@projeto.GetPorcentagemConcluida() %</span>
+                                        <a class="col-xs-2 btn btn-xs" href="../../Projeto/Details/@projeto.id">
+                                            <i class="glyphicon glyphicon-eye-open">
+                                            </i>
+                                        </a>
+
+                                        <a class="col-xs-2 btn btn-xs" href="../../Projeto/Edit/@projeto.id">
+                                            <i class="glyphicon glyphicon-pencil">
+                                            </i>
+                                        </a>
+                                    </div>
+                                    <div class="panel-body">
+                                        <canvas id="@projeto.id"></canvas>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            var data = [
+                                {
+                                    value: @projeto.GetPorcentagemConcluida(),
+                                    color: "#46BFBD",
+                                    highlight: "#5AD3D1",
+                                    label: "Porcentagem Concluida"
+                                },
+                                {
+                                    value: @projeto.GetProcentagemRestante(),
+                                    color: "#F7464A",
+                                    highlight: "#FF5A5E",
+                                    label: "Porcentagem A Fazer"
+                                }];
+
+                            CreatDonutChart(data, @projeto.id);
+
+                            function CreatDonutChart(sprintDonut, contextID) {
+
+                                var ctx = document.getElementById(contextID).getContext("2d");
+                                var myDoughnutChart = new Chart(ctx).Doughnut(data);
+                            }
+                        </script>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

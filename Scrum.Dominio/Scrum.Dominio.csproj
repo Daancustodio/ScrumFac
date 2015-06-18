@@ -91,10 +91,12 @@
   <ItemGroup>
     <Compile Include="Models\BurnDownRelease.cs" />
     <Compile Include="Models\BurnDownSprint.cs" />
+    <Compile Include="Models\DonutSprint.cs" />
     <Compile Include="Models\Estoria.cs" />
     <Compile Include="Models\MembroTime.cs" />
     <Compile Include="Models\Papel.cs" />
     <Compile Include="Models\Projeto.cs" />
+    <Compile Include="Models\Projetos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Sprint.cs" />
     <Compile Include="Models\Status.cs" />
