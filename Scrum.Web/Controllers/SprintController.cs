@@ -28,9 +28,16 @@ namespace Scrum.Web.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
             }
             Sprint sprint = await db.Sprint.FindAsync(id);
+            //sprint.estorias = db.Estoria.Where(x => x.idSprint == sprint.id).ToList();
+
+            //foreach (var estoria in sprint.estorias)
+            //{
+            //    estoria.tarefas = db.Tarefa.Where(x => x.idEstoria == estoria.id).ToList();
+            //}
+
             if (sprint == null)
             {
                 return HttpNotFound();

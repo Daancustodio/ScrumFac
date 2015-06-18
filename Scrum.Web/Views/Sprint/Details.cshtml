@@ -6,103 +6,53 @@
 
 <h2 class="text-center">Detalhe sprint: @Model.titulo</h2>
 
-<div>
-    
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.titulo)
-        </dt>
+<div class="slide-left panel panel-info">
+    <div class="panel-heading">
+        <i class="fa fa-info fa-fw"></i> @Model.titulo
+    </div>
+    <div class="panel-body">
+        @foreach (var estoria in Model.estorias)
+        {
+            <div class="col-xs-12 col-sm-6 col-lg-4">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <i class="fa fa-plus fa-fw"></i> @estoria.titulo
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <ul class="media-list list-group">
+                            @foreach (var tarefa in estoria.tarefas)
+                            {
+                                <li class="media list-group-item">
+                                    <div class="media-body col-xs-8">
+                                        @tarefa.titulo
+                                    </div>
+                                    <div class="col-xs-1">
+                                        <i class="glyphicon glyphicon-ok"></i>
+                                    </div>
+                                    <div class="media-left col-xs-2">
+                                        <img class="media-object" src="http://placehold.it/24x24" alt="...">
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="panel-footer">
+                        <small><a bs-collapse-toggle><i class="glyphicon glyphicon-eye-open text-center"> Descrição</i></a></small>
+                        <div class="panel-collapse" bs-collapse-target>
+                            @estoria.descricao
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="panel-footer">
+        @Model.descricao
+    </div>
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.titulo)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.descricao)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.descricao)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.diasUteis)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.diasUteis)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.diasCerimonias)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.diasCerimonias)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.horasTrabDia)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.horasTrabDia)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.foco)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.foco)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.dataInicio)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.dataInicio)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.dataConclusao)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.dataConclusao)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.status.status)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.status.status)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.dataCriacao)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.dataCriacao)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.projeto.titulo)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.projeto.titulo)
-        </dd>
-
-        
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Editar", "Edit", new { id = Model.id }, new { @class = "btn btn-default", @title = "Editar sprint."})
-    @Html.ActionLink("Voltar a lista", "Index", null, new { @class = "btn btn-default", @title = "Voltar a lista de sprints cadastradas."})
-</p>
+    <p>
+        @Html.ActionLink("Editar", "Edit", new { id = Model.id }, new { @class = "btn btn-default", @title = "Editar sprint." })
+        @Html.ActionLink("Voltar a lista", "Index", null, new { @class = "btn btn-default", @title = "Voltar a lista de sprints cadastradas." })
+    </p>

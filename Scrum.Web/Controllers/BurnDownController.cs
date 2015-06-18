@@ -29,19 +29,13 @@ namespace Scrum.Web.Controllers
             //return Json(result, JsonRequestBehavior.AllowGet);
             return View();
         }
-        public ActionResult BuscarSprintId(long id)
+        public ActionResult BuscarSprintId(long idSprint)
         {
-            var sprint = db.Sprint.Where(s => s.idProjeto == id);
-            if (sprint != null)
-            {
-                ViewBag.idSprint = sprint.ToList();
+            var sprint = db.Sprint.Find(idSprint);            
 
-            }
-            else
-            {
-                sprint = null;
-            }
-            return Json(sprint, JsonRequestBehavior.AllowGet);
+            var burnDown = new BurnDownSprint(sprint);
+            var retorno = Json(burnDown, JsonRequestBehavior.AllowGet);
+            return retorno;
         }
         public ActionResult GetSprintProjeto(long idProjeto)
         {
@@ -49,11 +43,11 @@ namespace Scrum.Web.Controllers
 
 
 
-            //var list = new List<Sprint>();
+            var list = new List<Sprint>();
             //list = from json in db.Sprint where  select json;
             //string result = JsonConvert.SerializeObject(list, Formatting.Indented);
 
-            //ViewBag.pIdSprint = new SelectList(db.Sprint.Where(s => s.idProjeto.Equals(idProjeto)).ToList(), "id", "titulo");
+            ViewBag.pIdSprint = new SelectList(db.Sprint.Where(s => s.idProjeto.Equals(idProjeto)).ToList(), "id", "titulo");
             
             return Json(result, JsonRequestBehavior.AllowGet);
         }

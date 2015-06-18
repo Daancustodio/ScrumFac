@@ -142,7 +142,7 @@ namespace Scrum.Web.Controllers
             {
                 db.Dispose();
             }
-            base.Dispose(disposing);
+            base.Dispose(disposing);            
         }
     }
 }
