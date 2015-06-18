@@ -50,3 +50,4 @@ C:\wamp\www\ScrumFac\Scrum.Dominio\bin\Debug\System.Web.WebPages.Razor.xml
 C:\wamp\www\ScrumFac\Scrum.Dominio\bin\Debug\pt-br\System.Web.Mvc.resources.dll
 C:\wamp\www\ScrumFac\Scrum.Dominio\obj\Debug\Scrum.Dominio.dll
 C:\wamp\www\ScrumFac\Scrum.Dominio\obj\Debug\Scrum.Dominio.pdb
+C:\wamp\www\ScrumFac\Scrum.Dominio\obj\Debug\Scrum.Dominio.csprojResolveAssemblyReference.cache

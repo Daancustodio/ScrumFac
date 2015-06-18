@@ -50,5 +50,12 @@ namespace Scrum.Dominio.Models
         public virtual Sprint sprint { get; set; }
         [ForeignKey("idStatus")]        
         public virtual Status status { get; set; }
+
+        public string GetQuantidadeConcluida()
+        {
+            var qtdconcluida = this.tarefas.ToList().Where(x => x.FoiConcluida()).Count();
+            return string.Concat(qtdconcluida, "/", this.tarefas.Count);
+
+        }
     }
 }
