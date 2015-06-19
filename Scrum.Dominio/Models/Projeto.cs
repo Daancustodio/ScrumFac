@@ -71,7 +71,7 @@ namespace Scrum.Dominio.Models
         public decimal GetProcentagemRestante()
         {
             return  100 - this.GetPorcentagemConcluida();
-        }
+        }       
 
     }
 }

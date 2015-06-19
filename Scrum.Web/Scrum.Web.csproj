@@ -1001,7 +1001,6 @@
     <Content Include="Views\Shared\_Login.cshtml" />
     <Content Include="Views\Autenticacao\Cadastro.cshtml" />
     <Content Include="Views\Autenticacao\Login.cshtml" />
-    <Content Include="Views\BurnDown\Chart.cshtml" />
     <Content Include="Scripts\version.json" />
     <Content Include="Views\Configuracao\Index.cshtml" />
     <Content Include="Views\MembroTime\Create.cshtml" />
@@ -1011,8 +1010,6 @@
     <Content Include="Views\MembroTime\Index.cshtml" />
     <Content Include="Views\Sprint\Delete.cshtml" />
     <Content Include="Views\Estoria\Delete.cshtml" />
-    <Content Include="Views\BurnDown\Index.cshtml" />
-    <Content Include="Views\BurnDown\ReleaseBurnDown.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -24,7 +24,7 @@ namespace Scrum.Dominio.Models
         public int? diasCerimonias { get; set; }
         [Required(ErrorMessage = "Informar as horas de trabalho dia da sprint.")]
         [Display(Name = "Horas de trabalho/dia")]
-        [DataType(DataType.Time)]
+        [DataType(DataType.Time)]       
         public TimeSpan horasTrabDia { get; set; }
         [Display(Name = "Foco")]        
         public int foco { get; set; }
