@@ -79,17 +79,17 @@
                 </div>
 
                 <div class="panel-body">
-                    
-                    @foreach (var sprint in Model.sprints)
-                    {
-                        <div class="row">
+                    <div class="row">
+                        @foreach (var sprint in Model.sprints)
+                        {
+
                             <div class="col-xs-4">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                        @sprint.titulo                                         
+                                        @sprint.titulo
                                         <span class="badge" data-toggle="tooltip" data-placement="top" title="Tarefas: Concluidas/Total">@sprint.GetQuantindadeTarefasConcluidas()</span>
-                                       
-                                         <a class="col-xs-2 btn btn-xs" href="../../Sprint/Details/@sprint.id">
+
+                                        <a class="col-xs-2 btn btn-xs" href="../../Sprint/Details/@sprint.id">
                                             <i class="glyphicon glyphicon-eye-open">
                                             </i>
                                         </a>
@@ -103,33 +103,34 @@
                                         <canvas id="@sprint.id"></canvas>
                                     </div>
 
+
                                 </div>
                             </div>
-                        </div>
-                        <script>
-                            var data = [
-                                {
-                                    value: @sprint.GetHorasRestantes(),
-                                    color: "#F7464A",
-                                    highlight: "#FF5A5E",
-                                    label: "Horas a fazer"
-                                },
-                                {
-                                    value: @sprint.GetHorasConcluidas(),
-                                    color: "#46BFBD",
-                                    highlight: "#5AD3D1",
-                                    label: "Horas Concluidas"
-                                }];
+                            <script>
+                                var data = [
+                                    {
+                                        value: @sprint.GetHorasRestantes(),
+                                        color: "#F7464A",
+                                        highlight: "#FF5A5E",
+                                        label: "Horas a fazer"
+                                    },
+                                    {
+                                        value: @sprint.GetHorasConcluidas(),
+                                        color: "#46BFBD",
+                                        highlight: "#5AD3D1",
+                                        label: "Horas Concluidas"
+                                    }];
 
-                            CreatDonutChart(data, @sprint.id);
+                                CreatDonutChart(data, @sprint.id);
 
-                            function CreatDonutChart(sprintDonut, contextID) {
+                                function CreatDonutChart(sprintDonut, contextID) {
 
-                                var ctx = document.getElementById(contextID).getContext("2d");
-                                var myDoughnutChart = new Chart(ctx).Doughnut(data);
-                            }
-                        </script>
-                    }
+                                    var ctx = document.getElementById(contextID).getContext("2d");
+                                    var myDoughnutChart = new Chart(ctx).Doughnut(data);
+                                }
+                            </script>
+                        }
+                    </div>
                 </div>
                 <div class="panel-footer">
                     @Model.descricao
